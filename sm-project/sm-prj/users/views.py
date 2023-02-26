@@ -15,7 +15,7 @@ def userLogin(request):
             user = authenticate(request, username=data['username'], password=data['password'])
             if user is not None:
                 login(request, user)
-                return HttpResponse("Successful Login")
+                return render(request, 'users/loggedin.html')
             else:
                 return HttpResponse("Invalid Login")
 

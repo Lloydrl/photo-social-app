@@ -1,0 +1,16 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block body %}
+<body>
+    <div class="grid place-items-center h-screen w-screen">
+        <div class="bg-white shadow-md m-10 w-2/5 rounded px-8 pt-6 pb-8 mb-4">
+            <div class="grid place-items-center mb-2">
+                <h1 class="mb-2 text-4xl font-extrabold">WELCOME TO PHOTO APP!</h1>
+                <h2 class="mb-2 text-gray-500">You have successfully logged in!</h2>
+                <p><a class="text-indigo-500" href="{% url 'users:index' %}">Take me to my posts!</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -7,14 +7,14 @@
     </div>
     <div class="grid mx-60 p-10 grid-cols-1">
         {% for post in posts %}
-            <a href="#">
+            <div>
                 <div class="rounded overflow-hidden w-[470px] h-[470px] bg-white shadow-lg ">
                     <div class="user-container flex mx-5 my-5">
                         <img class="rounded-full h-10 w-10" src="{{ profile.photo.url }}" alt="">
-                        <div class="mx-2 my-2 font-bold"><span class="text-indigo-500">{{ post.user }}</span></div>
+                        <div class="mx-2 my-2 font-bold"><span class="text-green-700"><a href="#">{{ post.user }}</a></span></div>
                     </div>
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">{{ post.title }}</div>
+                        <div class="font-bold text-xl mb-2 text-green-500"><a href="#">{{ post.title }}</a></div>
                         <p class="text-gray-700 text-base">{{ post.caption }}</p>
                     </div>
                     <img class="w-96 p-5" src="{{ post.image.url }}">
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </br>
-            </a>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}
